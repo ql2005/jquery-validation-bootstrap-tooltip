@@ -8,7 +8,15 @@
  * Released under the MIT license:
  * http://www.opensource.org/licenses/mit-license.php
  */
-(function ($) {
+(function( factory ) {
+  if ( typeof define === "function" && define.amd ) {
+    define( ["jquery"], factory );
+  } else if (typeof module === "object" && module.exports) {
+    module.exports = factory( require( "jquery" ) );
+  } else {
+    factory( jQuery );
+  }
+}(function( $ ) {
   var bsMajorVer = 0;
   var bsMinorVer = 0;
 
@@ -98,4 +106,6 @@
       },
     },
   });
-}(jQuery));
+// }(jQuery));
+return $;
+}));
