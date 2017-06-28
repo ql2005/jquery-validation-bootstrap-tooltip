@@ -92,6 +92,8 @@
           trigger: $.trim('manual ' + ($(element).data('trigger') || '')),
           delay: $(element).data('delay') || defaults.delay,
           container: $(element).data('container') || defaults.container,
+          placement: 'right',
+          template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow" style="border-right-color:#dd4b39;"></div><div class="tooltip-inner" style="background-color:#dd4b39;"></div></div>'
         };
 
         if (this.settings.tooltip_options && this.settings.tooltip_options[element.name]) {
